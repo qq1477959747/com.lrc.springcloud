@@ -13,6 +13,8 @@ spring:
           search-paths:
             - cloud-config-center3344/MyConfig
           default-label: config-center
+          username: 1477959747@qq.com
+          password: qq19990601
 eureka:
   client:
     service-url:
