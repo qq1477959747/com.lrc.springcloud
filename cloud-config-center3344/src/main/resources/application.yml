@@ -9,10 +9,10 @@ spring:
     config:
       server:
         git:
-          uri: git@github.com:qq1477959747/com.lrc.springcloud.git
+          uri: https://github.com/qq1477959747/com.lrc.springcloud.git
           search-paths:
             - cloud-config-center3344/MyConfig
-          default-label: config-center
+          default-label:  master
           username: 1477959747@qq.com
           password: qq19990601
 eureka:
