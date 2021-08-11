@@ -9,4 +9,11 @@ spring:
     config:
       server:
         git:
-          uri:
+          uri: git@github.com:qq1477959747/com.lrc.springcloud.git
+          search-paths:
+            - cloud-config-center3344/MyConfig
+          default-label: config-center
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka
