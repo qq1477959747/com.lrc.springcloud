@@ -5,6 +5,8 @@ spring:
   application:
     name: cloud-config-client
   cloud:
+    bootstrap:
+      enabled: true
     config:
       label: master # 分支名称
       name: config # 配置文件名称
