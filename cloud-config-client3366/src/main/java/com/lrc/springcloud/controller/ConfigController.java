@@ -7,12 +7,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @author luo
- * @date 2021/8/11 21:52
+ * @date 2021/8/12 21:46
  */
 @RestController
 @RefreshScope
 public class ConfigController {
-
     @Value("${config.info}")
     private String configInfo;
 
@@ -23,5 +22,4 @@ public class ConfigController {
     public String getConfigInfo() {
         return serverPort + " : " + configInfo;
     }
-
 }

@@ -9,7 +9,7 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/qq1477959747/com.lrc.springcloud.git
+          uri: https://github.com.cnpmjs.org/qq1477959747/com.lrc.springcloud.git
           search-paths:
             - cloud-config-center3344/MyConfig
           default-label:  master
