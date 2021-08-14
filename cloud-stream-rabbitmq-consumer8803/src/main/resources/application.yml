@@ -1,0 +1,36 @@
+server:
+  port: 8803
+
+spring:
+  application:
+    name: cloud-stream-consumer
+  cloud:
+    stream:
+      binders: # 配置要绑定的rabbitmq的服务信息
+        defaultRabbit: # 表示定义的名称，用于 binding 整合
+          type: rabbit # 消息组件类型
+          environment:
+            spring:
+              rabbitmq:
+                host: localhost
+                port: 5672
+                username: guest
+                password: guest
+      bindings: # 服务的整合处理
+        input: # 这个名字是一个通道的名称
+          destination: studyExchange # 表示要使用的 Exchange 名称定义
+          content-type: application/json # 设置要绑定的消息服务的具体设置
+          binder: defaultRabbit
+          group: lrc
+
+eureka:
+  instance:
+    lease-renewal-interval-in-seconds: 2 # 设置的心跳间隔（默认是30秒）
+    lease-expiration-duration-in-seconds: 5 # 如果现在超过5秒的间隔（默认90s）
+    instance-id: recive-8803 # 显示主机名称
+    prefer-ip-address: true #访问的路径变为 IP 地址
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://eureka7001:7001/eureka/
