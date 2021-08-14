@@ -15,7 +15,18 @@ spring:
           default-label:  master
           username: 1477959747@qq.com
           password: qq19990601
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:7001/eureka
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: busrefresh
