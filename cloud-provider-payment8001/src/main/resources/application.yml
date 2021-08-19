@@ -4,6 +4,12 @@ server:
 spring:
   application:
     name: cloud-payment-service
+  zipkin:
+    base-url: http://localhost:9411
+  sleuth:
+    sampler:
+      # 采样率值介于 0 到 1 之间，1 表示全部采集
+      probability: 1
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -22,7 +28,7 @@ eureka:
     # 抓取已有的注册信息，，默认为true，单节点无所谓，集群必须设置为true才能配合 ribbon 使用负载均衡
     fetch-registry: true
     service-url:
-      defaultZone: http://eureka7001:7001/eureka/,http://eureka7002:7002/eureka/,http://eureka7003:7003/eureka/
+      defaultZone: http://eureka7001:7001/eureka/
   instance:
     instance-id: payment8001
     prefer-ip-address: true
