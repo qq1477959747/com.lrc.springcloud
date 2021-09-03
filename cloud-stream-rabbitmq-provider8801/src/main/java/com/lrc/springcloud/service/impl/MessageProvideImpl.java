@@ -7,7 +7,6 @@ import org.springframework.cloud.stream.messaging.Source;
 import org.springframework.messaging.MessageChannel;
 import org.springframework.messaging.support.MessageBuilder;
 
-import javax.annotation.Resource;
 import java.util.UUID;
 
 /**
@@ -17,8 +16,11 @@ import java.util.UUID;
 @EnableBinding(Source.class)
 public class MessageProvideImpl implements MessageProvide {
 
+    /**
+     * 消息发送管道
+     */
     @Autowired
-    private MessageChannel output; // 消息发送管道
+    private MessageChannel output;
 
     @Override
     public String send() {

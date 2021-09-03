@@ -27,6 +27,7 @@
         <module>cloud-stream-rabbitmq-consumer8803</module>
         <module>cloudalibabab-provider-payment9001</module>
         <module>cloudalibabab-provider-payment9002</module>
+        <module>cloudalibabab-consumer-nacos-order83</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -58,6 +59,8 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+<!--             https://mvnrepository.com/artifact/io.springfox/springfox-swagger-ui-->
+
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
